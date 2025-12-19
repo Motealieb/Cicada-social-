@@ -1,0 +1,20 @@
+{
+  "name": "cicada-social",
+  "version": "1.0.0",
+  "description": "CICADA Social - Secure AI-powered Cyberpunk Social Network",
+  "author": "CICADA Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000",
+    "build": "echo \"Static web build ready\"",
+    "deploy": "echo \"Deploy using Vercel / Firebase / Netlify\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
