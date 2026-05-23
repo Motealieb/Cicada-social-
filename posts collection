@@ -1,0 +1,10 @@
+{
+   userId,
+   caption,
+   image,
+   video,
+   likes:[],
+   comments:[],
+   shares,
+   createdAt
+}
