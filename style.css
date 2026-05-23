@@ -1,4 +1,84 @@
-body{margin:0;background:#000;color:#d4af37;font-family:Arial}
-#splash{height:100vh;display:flex;align-items:center;justify-content:center;
-font-size:32px;text-align:center;animation:glow 2s infinite alternate}
-@keyframes glow{from{text-shadow:0 0 10px #d4af37}to{text-shadow:0 0 25px #ffd700}}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #1e293b;
+}
+
+header h1{
+    color:#22c55e;
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+main{
+    width:700px;
+    margin:30px auto;
+}
+
+.create-post{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    background:#0f172a;
+    border:none;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    resize:none;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    background:#22c55e;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.post{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.post h3{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+.actions{
+    margin-top:15px;
+}
+
+.actions button{
+    margin-right:10px;
+}
