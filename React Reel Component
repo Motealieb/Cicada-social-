@@ -1,0 +1,7 @@
+<video
+   src={reel.video}
+   autoPlay
+   loop
+   controls
+   className="reelVideo"
+/>
