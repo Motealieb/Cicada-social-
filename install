@@ -1,0 +1,5 @@
+npm install react-router-dom axios
+npm install socket.io-client
+npm install framer-motion
+npm install react-icons
+npm install redux react-redux
