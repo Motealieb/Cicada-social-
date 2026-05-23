@@ -1,0 +1,12 @@
+{
+   username,
+   email,
+   password,
+   avatar,
+   coverPhoto,
+   bio,
+   followers:[],
+   following:[],
+   verified,
+   createdAt
+}
