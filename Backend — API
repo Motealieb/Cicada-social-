@@ -1,0 +1,4 @@
+npm install express mongoose dotenv
+npm install bcryptjs jsonwebtoken
+npm install multer cloudinary
+npm install socket.io
