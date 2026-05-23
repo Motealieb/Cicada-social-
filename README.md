@@ -1,5 +1,4 @@
-# Cicada-social-
-a premium social media experience with a dark, elegant design. Share photos, explore stories, chat privately, and enjoy a smart, minimal interface built for creativity and privacy.
+
 # 🦗 Cicada Social
 
 Cicada Social is a next-generation social media platform built with modern technologies including React, Node.js, MongoDB, Flutter, WebRTC, and AI integrations.
