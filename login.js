@@ -1,33 +1,54 @@
-// src/components/Login.jsx
-import { useState } from 'react';
-import { loginArtist } from '../firebase';
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
-export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+app.post("/register", async (req, res) => {
 
-  const handleLogin = () => {
-    loginArtist(email, password)
-      .then(() => alert('Logged in successfully!'))
-      .catch((error) => alert(error.message));
-  };
+    const hashedPassword =
+      await bcrypt.hash(req.body.password, 10);
 
-  return (
-    <div className="login">
-      <h2>Artist Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
-    </div>
-  );
-}
+    const user = new User({
+        username: req.body.username,
+        email: req.body.email,
+        password: hashedPassword
+    });
+
+    await user.save();
+
+    res.json({
+        message: "Account Created"
+    });
+});
+
+app.post("/login", async (req, res) => {
+
+    const user = await User.findOne({
+        email: req.body.email
+    });
+
+    if(!user){
+        return res.status(400).json({
+            message: "User not found"
+        });
+    }
+
+    const valid = await bcrypt.compare(
+        req.body.password,
+        user.password
+    );
+
+    if(!valid){
+        return res.status(400).json({
+            message: "Wrong Password"
+        });
+    }
+
+    const token = jwt.sign(
+        { id: user._id },
+        "CICADA_SECRET"
+    );
+
+    res.json({
+        token,
+        username: user.username
+    });
+});
