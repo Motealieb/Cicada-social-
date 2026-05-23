@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CICADA Social</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicada Social</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="splash">CICADA SOCIAL<br><small>AI Network Initializing...</small></div>
-  <div id="app" style="display:none;"></div>
-  <script src="app.js"></script>
+
+    <header>
+        <h1>Cicada Social</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="create-post">
+
+            <textarea id="postInput"
+             placeholder="What's happening today?"></textarea>
+
+            <button onclick="createPost()">
+                Publish
+            </button>
+
+        </section>
+
+        <section id="feed"></section>
+
+    </main>
+
+<script src="app.js"></script>
+
 </body>
 </html>
