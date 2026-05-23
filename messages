@@ -1,0 +1,8 @@
+{
+   senderId,
+   receiverId,
+   text,
+   media,
+   seen,
+   createdAt
+}
